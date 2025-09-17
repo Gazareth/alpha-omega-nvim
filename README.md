@@ -1,47 +1,52 @@
-# A Neovim Plugin Template
+# αω alpha-omega-nvim
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ellisonleao/nvim-plugin-template/lint-test.yml?branch=main&style=for-the-badge)
 ![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)
 
-A template repository for Neovim plugins.
+Multiple Alpha dashboards in Neovim
 
-## Using it
+## Installation
 
-Via `gh`:
+<details open>
+<summary>Lazy.nvim</summary>
 
+```lua
+{
+    'Gazareth/AlphaOmega',
+    dependencies = { 'goolord/alpha-nvim' },
+    config = function ()
+        require'alpha-omega-nvim'.setup(require'alpha.themes.startify'.config)
+    end
+};
 ```
-$ gh repo create my-plugin -p ellisonleao/nvim-plugin-template
+</details>
+
+<details open>
+<summary>Packer</summary>
+
+```lua
+use {
+    'Gazareth/AlphaOmega',
+    requires = { 'goolord/alpha-nvim' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+}
 ```
+</details>
 
-Via github web page:
+<details open>
+<summary>paq</summary>
 
-Click on `Use this template`
-
-![](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
-
-## Features and structure
-
-- 100% Lua
-- Github actions for:
-  - running tests using [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) and [busted](https://olivinelabs.com/busted/)
-  - check for formatting errors (Stylua)
-  - vimdocs autogeneration from README.md file
-  - luarocks release (LUAROCKS_API_KEY secret configuration required)
-
-### Plugin structure
-
+```lua
+require "paq" {
+    "Gazareth/AlphaOmega";
+    "goolord/alpha-nvim";
+}
+require'alpha'.setup(require'alpha.themes.startify'.config)
 ```
-.
-├── lua
-│   ├── plugin_name
-│   │   └── module.lua
-│   └── plugin_name.lua
-├── Makefile
-├── plugin
-│   └── plugin_name.lua
-├── README.md
-├── tests
-│   ├── minimal_init.lua
-│   └── plugin_name
-│       └── plugin_name_spec.lua
-```
+</details>
+
+---
+
+> Plugin generated from  [ellisonleao/nvim-plugin-template](https://github.com/ellisonleao/nvim-plugin-template)
