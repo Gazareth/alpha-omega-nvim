@@ -47,6 +47,16 @@ require'alpha'.setup(require'alpha.themes.startify'.config)
 ```
 </details>
 
+### Config example
+
+See [init.lua](https://github.com/Gazareth/dotfiles/tree/be3c3b81c6f01de2a0a5bd24dc800ffc3de49379/nvim/nvChad/starter/lua/configs/overrides/alpha-omega) and its adjacent files:
+
+- Base
+- Project
+- Settings
+
+The function in [init.lua](https://github.com/Gazareth/dotfiles/tree/be3c3b81c6f01de2a0a5bd24dc800ffc3de49379/nvim/nvChad/starter/lua/configs/overrides/alpha-omega) must be called as part of alpha-omega's setup.
+
 ---
 
 > Plugin generated from  [ellisonleao/nvim-plugin-template](https://github.com/ellisonleao/nvim-plugin-template)
